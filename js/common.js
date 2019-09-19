@@ -22,7 +22,15 @@ $(function() {
     if (window.location.href.indexOf('#section-4')) {
         $('.section-4').addClass('active');
     }
+    $('.openbutton').click(function(){
+      $(this).toggleClass('open');
+    });
 
+	 /* Menu fade/in out on mobile */
+    $(".openbutton").click(function(e){
+        e.preventDefault();
+        $(".menu").toggleClass('open');
+    });
 });
 
 $(window).scroll(function() {
