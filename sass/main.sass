@@ -1,0 +1,512 @@
+
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #c8c8c8
+	opacity: 1
+
+*:-moz-placeholder
+	color: #c8c8c8
+	opacity: 1
+
+*::-moz-placeholder
+	color: #c8c8c8
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #c8c8c8
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+ 	position: relative
+	line-height: 1.65
+	font-family: 'Roboto', sans-serif
+	overflow-x: hidden
+	margin: 0
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: #928bca
+	color: #fff
+
+header 
+	padding: 35px 0 30px
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	background: #ffffff
+	z-index: 9999
+	// set animation
+	-webkit-transition: all 0.4s ease
+	transition: all 0.4s ease
+
+	ul 
+		list-style: none
+		display: flex
+		justify-content: space-around
+		margin: 0
+
+		a 
+			color: #435993
+			font-size: 14px
+			font-weight: 300
+			text-decoration: none
+
+			&:hover, &.active 
+				color: #1c1c1c
+	&.sticky 
+ 		padding: 15px 0 10px
+ 	
+
+.content 
+	background:  url(../img/content_bg.png) repeat-x 50% 0
+	padding: 130px 15px 0
+	margin-top: 80px
+
+.container 
+	max-width: 768px
+	margin: 0 auto
+	text-align: center
+
+h1 
+	color: #000000
+	font-size: 70px
+	font-weight: 100
+	line-height: 1.2
+	margin: 0
+
+
+h2 
+	color: #1c1c1c
+	font-size: 30px
+	font-weight: 300
+	margin: 0 0 50px
+	line-height: 1.2
+	margin-top: 75px
+
+	&.custom_space 
+		margin-bottom: 20px
+
+	&:before 
+		content: ''
+		width: 47px
+		height: 47px
+		margin: 0 auto 30px
+		display: block
+
+	&.icon1:before 
+		background: url(../img/icon1.svg) no-repeat 0 0
+		background-size: cover
+
+	&.icon2:before 
+		background: url(../img/icon2.svg) no-repeat 0 0
+		background-size: cover
+
+	&.icon3:before 
+		background: url(../img/icon3.svg) no-repeat 0 0
+		background-size: cover
+
+	&.icon4:before 
+		background: url(../img/icon4.svg) no-repeat 0 0
+		background-size: cover
+
+.sub_info 
+	color: #1c1c1c
+	font-family: 'Roboto', sans-serif
+	font-size: 16px
+	font-weight: 300
+	line-height: 23.99px
+	max-width: 500px
+	margin: 0 auto 40px
+
+.input_style1 
+	padding: 19px 15px 17px 15px
+	font-size: 24px
+	max-width: 520px
+	width: 100%
+	text-align: center
+	border: 1px solid #e5e5e5
+	border-radius: 5px
+	margin: 0 auto 25px
+	color: #c8c8c8
+	font-family: 'Roboto', sans-serif
+
+	&:last-child 
+		margin-bottom: 0
+
+.area_stle 
+	padding: 19px 15px 17px 15px
+	font-size: 24px
+	max-width: 520px
+	width: 100%
+	text-align: left
+	border: 1px solid #e5e5e5
+	border-radius: 5px
+	margin: 0 auto 25px
+	color: #c8c8c8
+	height: 180px
+	font-family: 'Roboto', sans-serif
+	margin-bottom: 80px
+
+.btn 
+	color: #ffffff
+	font-family: 'Roboto', sans-serif
+	font-size: 16px
+	font-weight: 300
+	background: #435993
+	padding: 18px 30px
+	margin-bottom: 80px
+	border: none
+	border-radius: 5px
+	cursor: pointer 
+
+	&:hover 
+		color: #435993
+		background: #c8c8c8
+	
+
+input[type="date"] 
+	display: block
+	position: relative
+	padding: 19px 10px 17px 10px
+	font-size: 24px
+	max-width: 320px
+	width: 100%
+	text-align: center
+	font-family: 'Roboto', sans-serif
+	border: 1px solid #e5e5e5
+	border-radius: 5px
+	background: white url("../img/arrow_bottom.svg") right 1.4rem	center no-repeat
+	cursor: pointer
+	margin: 0 auto 25px
+	color: #c8c8c8
+
+
+input[type="date"]:focus 
+	outline: none
+	border-color: #e5e5e5
+	box-shadow: none
+
+
+::-webkit-datetime-edit 
+
+::-webkit-datetime-edit-fields-wrapper 
+
+::-webkit-datetime-edit-month-field:hover,
+::-webkit-datetime-edit-day-field:hover,
+::-webkit-datetime-edit-year-field:hover	
+	background: rgba(0, 120, 250, 0.1)
+
+::-webkit-datetime-edit-text 
+	opacity: 0
+
+::-webkit-clear-button,
+::-webkit-inner-spin-button 
+	display: none
+
+::-webkit-calendar-picker-indicator 
+	position: absolute
+	width: 2.5rem
+	height: 100%
+	top: 0
+	right: 0
+	bottom: 0
+	opacity: 0
+	cursor: pointer
+	color: rgba(0, 120, 250, 0)
+	background: rgba(0, 120, 250, 0)
+ 
+
+
+input[type="date"]:hover::-webkit-calendar-picker-indicator 
+	opacity: 0.05
+
+input[type="date"]:hover::-webkit-calendar-picker-indicator:hover
+	opacity: 0.15
+
+
+.checkbox 
+	position: absolute
+	opacity: 0 
+
+	& + label 
+		position: relative
+		cursor: pointer
+		padding: 0
+	
+
+	
+	& + label:before 
+		content: ''
+		margin-right: 10px
+		display: inline-block
+		vertical-align: text-top
+		width: 20px
+		height: 20px
+		background: white
+		border: 1px solid #435993
+		border-radius: 4px
+	
+
+	&:checked + label:before 
+		background: transparent
+	
+	&:disabled + label 
+			color: #b8b8b8
+			cursor: auto
+	
+
+	&:disabled + label:before 
+			box-shadow: none
+			background: #ddd
+
+	&:checked + label:after 
+			content: ''
+			position: absolute
+			left: 5px
+			top: 9px
+			background: #8e88c7
+			width: 2px
+			height: 2px
+			box-shadow: 2px 0 0 #8e88c7, 4px 0 0 #8e88c7, 4px -2px 0 #8e88c7, 4px -4px 0 #8e88c7, 4px -6px 0 #8e88c7, 4px -8px 0 #8e88c7
+			transform: rotate(45deg) 
+
+.exp_block 
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+
+
+	ul 
+		list-style: none
+		text-align: left
+		margin: 0	
+
+		li 
+			font-size: 16px
+			font-weight: 300
+			margin-bottom: 12px
+
+			
+
+// Range Slider
+
+// Base Colors
+$shade-10: #2c3e50 !default
+$shade-1: #d7dcdf !default
+$shade-0: #fff !default
+$teal: #1abc9c !default
+
+
+
+
+
+.range_slider
+	margin: 60px 0 0 0%
+
+
+$range-width: 100% !default
+
+$range-handle-color: $shade-10 !default
+$range-handle-color-hover: $teal !default
+$range-handle-size: 20px !default
+
+$range-track-color: $shade-1 !default
+$range-track-height: 20px !default
+
+$range-label-color: $shade-10 !default
+$range-label-width: 60px !default
+
+.range_slider
+	width: $range-width
+
+.range_slider_info
+	position: relative
+	z-index: 2
+
+	ul
+		list-style: none
+		text-align: left
+		padding: 0
+		margin: 0
+		width: 100%
+		display: flex
+		justify-content: space-between
+		
+		li
+			width: 24%
+			padding-bottom: 15px
+			font-size: 13px
+			font-weight: 300
+			position: relative
+			align-self: flex-end
+
+			&:before 
+				content: ''
+				position: absolute
+				width: 1px
+				background: #fff
+				height: 20px
+				top: 100%;
+				left: 0
+
+			&:after 
+				content: ''
+				position: absolute
+				width: 1px
+				border-left: dotted 1px #ececec
+				height: 20px
+				margin-top: 25px;
+				left: 0
+
+
+			&:nth-child(2) 
+				width: 20%
+
+			&:last-child 
+				text-align: right
+
+			&:last-child:before 
+				left: auto
+				right: 0
+
+			&:last-child:after 
+				left: auto
+				right: 0
+
+			em 
+				list-style: none
+				display: none
+
+.range_slider__range 
+	-webkit-appearance: none
+	width: 100%
+	height: $range-track-height
+	background: $range-track-color
+	outline: none
+	padding: 0
+	margin: 0
+	// clip-path: polygon(100% 38%, 100% 100%, 0 100%, 0 94%)
+
+	// Range Handle
+	&::-webkit-slider-thumb 
+		appearance: none
+		width: 23px
+		height: 26px
+		background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDIzIDI2Ij48ZGVmcz48Y2xpcFBhdGggaWQ9Im04aTJhIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMjIuNzkgMTQuODQ1YzAgNi4wNzEtNC45MjIgMTAuOTkzLTEwLjk5NSAxMC45OTNDNS43MjMgMjUuODM4LjggMjAuOTE2LjggMTQuODQ1YzAtNC4yMTQgMi4zNzMtNy44NyA1Ljg1NC05LjcxNWwzLjcxNC0zLjcxM2MuNzgtLjc4IDIuMDQ0LS43OCAyLjgyNCAwTDE2Ljg3NyA1LjFjMy41MTIgMS44MzUgNS45MTQgNS41MDYgNS45MTQgOS43NDR6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGc+PGc+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTIyLjc5IDE0Ljg0NWMwIDYuMDcxLTQuOTIyIDEwLjk5My0xMC45OTUgMTAuOTkzQzUuNzIzIDI1LjgzOC44IDIwLjkxNi44IDE0Ljg0NWMwLTQuMjE0IDIuMzczLTcuODcgNS44NTQtOS43MTVsMy43MTQtMy43MTNjLjc4LS43OCAyLjA0NC0uNzggMi44MjQgMEwxNi44NzcgNS4xYzMuNTEyIDEuODM1IDUuOTE0IDUuNTA2IDUuOTE0IDkuNzQ0eiIvPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2IwYjBiMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iNTAiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTIyLjc5IDE0Ljg0NWMwIDYuMDcxLTQuOTIyIDEwLjk5My0xMC45OTUgMTAuOTkzQzUuNzIzIDI1LjgzOC44IDIwLjkxNi44IDE0Ljg0NWMwLTQuMjE0IDIuMzczLTcuODcgNS44NTQtOS43MTVsMy43MTQtMy43MTNjLjc4LS43OCAyLjA0NC0uNzggMi44MjQgMEwxNi44NzcgNS4xYzMuNTEyIDEuODM1IDUuOTE0IDUuNTA2IDUuOTE0IDkuNzQ0eiIgY2xpcC1wYXRoPSJ1cmwoJnF1b3Q7I204aTJhJnF1b3Q7KSIvPjwvZz48L2c+PC9zdmc+) no-repeat 0% 0%
+		cursor: pointer
+		transition: background .15s ease-in-out
+		margin-top: 50px
+
+		&:hover 
+			background-color: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDIzIDI2Ij48ZGVmcz48Y2xpcFBhdGggaWQ9Im04aTJhIj48cGF0aCBmaWxsPSIjOGE4N2M2IiBkPSJNMjIuNzkgMTQuODQ1YzAgNi4wNzEtNC45MjIgMTAuOTkzLTEwLjk5NSAxMC45OTNDNS43MjMgMjUuODM4LjggMjAuOTE2LjggMTQuODQ1YzAtNC4yMTQgMi4zNzMtNy44NyA1Ljg1NC05LjcxNWwzLjcxNC0zLjcxM2MuNzgtLjc4IDIuMDQ0LS43OCAyLjgyNCAwTDE2Ljg3NyA1LjFjMy41MTIgMS44MzUgNS45MTQgNS41MDYgNS45MTQgOS43NDR6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGc+PGc+PHBhdGggZmlsbD0iIzhhODdjNiIgZD0iTTIyLjc5IDE0Ljg0NWMwIDYuMDcxLTQuOTIyIDEwLjk5My0xMC45OTUgMTAuOTkzQzUuNzIzIDI1LjgzOC44IDIwLjkxNi44IDE0Ljg0NWMwLTQuMjE0IDIuMzczLTcuODcgNS44NTQtOS43MTVsMy43MTQtMy43MTNjLjc4LS43OCAyLjA0NC0uNzggMi44MjQgMEwxNi44NzcgNS4xYzMuNTEyIDEuODM1IDUuOTE0IDUuNTA2IDUuOTE0IDkuNzQ0eiIvPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzhhODdjNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iNTAiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTIyLjc5IDE0Ljg0NWMwIDYuMDcxLTQuOTIyIDEwLjk5My0xMC45OTUgMTAuOTkzQzUuNzIzIDI1LjgzOC44IDIwLjkxNi44IDE0Ljg0NWMwLTQuMjE0IDIuMzczLTcuODcgNS44NTQtOS43MTVsMy43MTQtMy43MTNjLjc4LS43OCAyLjA0NC0uNzggMi44MjQgMEwxNi44NzcgNS4xYzMuNTEyIDEuODM1IDUuOTE0IDUuNTA2IDUuOTE0IDkuNzQ0eiIgY2xpcC1wYXRoPSJ1cmwoJnF1b3Q7I204aTJhJnF1b3Q7KSIvPjwvZz48L2c+PC9zdmc+) no-repeat 0% 0%
+		
+	
+
+	&:active::-webkit-slider-thumb 
+		background-color: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDIzIDI2Ij48ZGVmcz48Y2xpcFBhdGggaWQ9Im04aTJhIj48cGF0aCBmaWxsPSIjOGE4N2M2IiBkPSJNMjIuNzkgMTQuODQ1YzAgNi4wNzEtNC45MjIgMTAuOTkzLTEwLjk5NSAxMC45OTNDNS43MjMgMjUuODM4LjggMjAuOTE2LjggMTQuODQ1YzAtNC4yMTQgMi4zNzMtNy44NyA1Ljg1NC05LjcxNWwzLjcxNC0zLjcxM2MuNzgtLjc4IDIuMDQ0LS43OCAyLjgyNCAwTDE2Ljg3NyA1LjFjMy41MTIgMS44MzUgNS45MTQgNS41MDYgNS45MTQgOS43NDR6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGc+PGc+PHBhdGggZmlsbD0iIzhhODdjNiIgZD0iTTIyLjc5IDE0Ljg0NWMwIDYuMDcxLTQuOTIyIDEwLjk5My0xMC45OTUgMTAuOTkzQzUuNzIzIDI1LjgzOC44IDIwLjkxNi44IDE0Ljg0NWMwLTQuMjE0IDIuMzczLTcuODcgNS44NTQtOS43MTVsMy43MTQtMy43MTNjLjc4LS43OCAyLjA0NC0uNzggMi44MjQgMEwxNi44NzcgNS4xYzMuNTEyIDEuODM1IDUuOTE0IDUuNTA2IDUuOTE0IDkuNzQ0eiIvPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzhhODdjNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iNTAiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTIyLjc5IDE0Ljg0NWMwIDYuMDcxLTQuOTIyIDEwLjk5My0xMC45OTUgMTAuOTkzQzUuNzIzIDI1LjgzOC44IDIwLjkxNi44IDE0Ljg0NWMwLTQuMjE0IDIuMzczLTcuODcgNS44NTQtOS43MTVsMy43MTQtMy43MTNjLjc4LS43OCAyLjA0NC0uNzggMi44MjQgMEwxNi44NzcgNS4xYzMuNTEyIDEuODM1IDUuOTE0IDUuNTA2IDUuOTE0IDkuNzQ0eiIgY2xpcC1wYXRoPSJ1cmwoJnF1b3Q7I204aTJhJnF1b3Q7KSIvPjwvZz48L2c+PC9zdmc+) no-repeat 0% 0%
+	
+
+	&::-moz-range-thumb 
+		width: $range-handle-size
+		height: $range-handle-size
+		border: 0
+		border-radius: 50%
+		background: $range-handle-color
+		cursor: pointer
+		transition: background .15s ease-in-out
+
+		&:hover 
+			background-color: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDIzIDI2Ij48ZGVmcz48Y2xpcFBhdGggaWQ9Im04aTJhIj48cGF0aCBmaWxsPSIjOGE4N2M2IiBkPSJNMjIuNzkgMTQuODQ1YzAgNi4wNzEtNC45MjIgMTAuOTkzLTEwLjk5NSAxMC45OTNDNS43MjMgMjUuODM4LjggMjAuOTE2LjggMTQuODQ1YzAtNC4yMTQgMi4zNzMtNy44NyA1Ljg1NC05LjcxNWwzLjcxNC0zLjcxM2MuNzgtLjc4IDIuMDQ0LS43OCAyLjgyNCAwTDE2Ljg3NyA1LjFjMy41MTIgMS44MzUgNS45MTQgNS41MDYgNS45MTQgOS43NDR6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGc+PGc+PHBhdGggZmlsbD0iIzhhODdjNiIgZD0iTTIyLjc5IDE0Ljg0NWMwIDYuMDcxLTQuOTIyIDEwLjk5My0xMC45OTUgMTAuOTkzQzUuNzIzIDI1LjgzOC44IDIwLjkxNi44IDE0Ljg0NWMwLTQuMjE0IDIuMzczLTcuODcgNS44NTQtOS43MTVsMy43MTQtMy43MTNjLjc4LS43OCAyLjA0NC0uNzggMi44MjQgMEwxNi44NzcgNS4xYzMuNTEyIDEuODM1IDUuOTE0IDUuNTA2IDUuOTE0IDkuNzQ0eiIvPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzhhODdjNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iNTAiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTIyLjc5IDE0Ljg0NWMwIDYuMDcxLTQuOTIyIDEwLjk5My0xMC45OTUgMTAuOTkzQzUuNzIzIDI1LjgzOC44IDIwLjkxNi44IDE0Ljg0NWMwLTQuMjE0IDIuMzczLTcuODcgNS44NTQtOS43MTVsMy43MTQtMy43MTNjLjc4LS43OCAyLjA0NC0uNzggMi44MjQgMEwxNi44NzcgNS4xYzMuNTEyIDEuODM1IDUuOTE0IDUuNTA2IDUuOTE0IDkuNzQ0eiIgY2xpcC1wYXRoPSJ1cmwoJnF1b3Q7I204aTJhJnF1b3Q7KSIvPjwvZz48L2c+PC9zdmc+) no-repeat 0% 0%
+		
+	
+
+	&:active::-moz-range-thumb 
+		background-color: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDIzIDI2Ij48ZGVmcz48Y2xpcFBhdGggaWQ9Im04aTJhIj48cGF0aCBmaWxsPSIjOGE4N2M2IiBkPSJNMjIuNzkgMTQuODQ1YzAgNi4wNzEtNC45MjIgMTAuOTkzLTEwLjk5NSAxMC45OTNDNS43MjMgMjUuODM4LjggMjAuOTE2LjggMTQuODQ1YzAtNC4yMTQgMi4zNzMtNy44NyA1Ljg1NC05LjcxNWwzLjcxNC0zLjcxM2MuNzgtLjc4IDIuMDQ0LS43OCAyLjgyNCAwTDE2Ljg3NyA1LjFjMy41MTIgMS44MzUgNS45MTQgNS41MDYgNS45MTQgOS43NDR6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PGc+PGc+PHBhdGggZmlsbD0iIzhhODdjNiIgZD0iTTIyLjc5IDE0Ljg0NWMwIDYuMDcxLTQuOTIyIDEwLjk5My0xMC45OTUgMTAuOTkzQzUuNzIzIDI1LjgzOC44IDIwLjkxNi44IDE0Ljg0NWMwLTQuMjE0IDIuMzczLTcuODcgNS44NTQtOS43MTVsMy43MTQtMy43MTNjLjc4LS43OCAyLjA0NC0uNzggMi44MjQgMEwxNi44NzcgNS4xYzMuNTEyIDEuODM1IDUuOTE0IDUuNTA2IDUuOTE0IDkuNzQ0eiIvPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzhhODdjNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iNTAiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTIyLjc5IDE0Ljg0NWMwIDYuMDcxLTQuOTIyIDEwLjk5My0xMC45OTUgMTAuOTkzQzUuNzIzIDI1LjgzOC44IDIwLjkxNi44IDE0Ljg0NWMwLTQuMjE0IDIuMzczLTcuODcgNS44NTQtOS43MTVsMy43MTQtMy43MTNjLjc4LS43OCAyLjA0NC0uNzggMi44MjQgMEwxNi44NzcgNS4xYzMuNTEyIDEuODM1IDUuOTE0IDUuNTA2IDUuOTE0IDkuNzQ0eiIgY2xpcC1wYXRoPSJ1cmwoJnF1b3Q7I204aTJhJnF1b3Q7KSIvPjwvZz48L2c+PC9zdmc+) no-repeat 0% 0%
+	
+	
+ 
+		
+	
+.range_bg 
+	position: relative
+	z-index: 1
+
+	&:before 
+		background: #fff
+		content: ''
+		display: block
+		height: 20px
+		width: 100%
+		clip-path: polygon(100% 0, 0 100%, 0 0);
+		position: absolute
+		top: 0
+		left: 0
+
+
+// Range Label
+.range_slider__value 
+	display: inline-block
+	position: relative
+	width: $range-label-width
+	color: $shade-0
+	line-height: 20px
+	text-align: center
+	border-radius: 3px
+	background: $range-label-color
+	padding: 5px 10px
+	margin-left: 8px
+
+	&:after 
+		position: absolute
+		top: 8px
+		left: -7px
+		width: 0
+		height: 0
+		border-top: 7px solid transparent
+		border-right: 7px solid $range-label-color
+		border-bottom: 7px solid transparent
+		content: ''
+	
+
+
+
+// Firefox Overrides
+::-moz-range-track 
+		background: $range-track-color
+		border: 0
+
+
+input::-moz-focus-inner,
+input::-moz-focus-outer	
+	border: 0 
+
+
+@import "media" // Всегда в конце

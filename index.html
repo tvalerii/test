@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+		<header>
+			<ul class="menu container">
+				<li><a href="#section-1" class="section-1">Личная информация</a></li>
+				<li><a href="#section-2" class="section-2">Опыт</a></li>
+				<li><a href="#section-3" class="section-3">JavaScript</a></li>
+				<li><a href="#section-4" class="section-4">О себе</a></li>
+			</ul>
+		</header>
+	<div class="content">	
+		<div class="container">
+			<h1>Анкета</h1>
+			<form>
+				<div id="section-1" class="section">
+					<h2 class="icon1">Личная информация</h2>
+					<input type="text" name="firstName" placeholder="ФИО" value="Тарасов Валерий Русланович" class="input_style1">
+					<input type="date" value="1985-05-28" min="1905-01-01" max="2019-01-01">
+					<input type="text" name="city" placeholder="Место проживания" value="Николаев" class="input_style1">
+					<input type="text" name="skype" placeholder="Skype" class="input_style1" value="valerii.tarasov">
+					<input type="email" name="email" placeholder="E-mail" class="input_style1" value="kalhazan@gmail.com">
+				</div>
+				<div id="section-2" class="section">
+					<h2 class="icon2">Расскажите о своем опыте</h2>
+					<div class="exp_block">
+						<ul>
+							<li>
+								<input class="checkbox" checked id="check1" type="checkbox" value="value1">
+								<label for="check1">БЭМ/OOCSS</label>
+							</li>
+							<li>
+								<input class="checkbox" checked id="check2" type="checkbox" value="value2">
+								<label for="check2">Stylus/LESS/SASS</label>
+							</li>
+							<li>
+								<input class="checkbox" checked id="check3" type="checkbox" value="value3">
+								<label for="check3">Работаю с SVG</label>
+							</li>
+						</ul>
+						
+						<ul class="unstyled centered">
+							<li>
+								<input class="checkbox" checked id="check4" type="checkbox" value="value4">
+								<label for="check4" >Верстаю семантично</label>
+							</li>
+							<li>
+								<input class="checkbox" id="check5" type="checkbox" value="value5">
+								<label for="check5">ES2015/ES2016</label>
+							</li>
+							<li>
+								<input class="checkbox" checked id="check6" type="checkbox" value="value6">
+								<label for="check6" >Gulp/GRUNT</label>
+							</li>
+						</ul>
+
+						<ul class="unstyled centered">
+							<li>
+								<input class="checkbox" id="check7" type="checkbox" value="value7">
+								<label for="check7">Webpack</label>
+							</li>
+							<li>
+								<input class="checkbox" checked id="check8" type="checkbox" value="value8">
+								<label for="check8">jQuery</label>
+							</li>
+							<li>
+								<input class="checkbox" checked id="check9" type="checkbox" value="value9">
+								<label for="check9">Ипользую Git</label>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+				<div id="section-3" class="section">
+					<h2 class="icon3">Уровень владения JavaScript</h2>
+
+					<div class="range_slider">
+						<div class="range_slider_info">
+							<ul>
+								<li><span>Не владею</span><em class="hide">0</em></li>
+								<li><span>Использую готовые решения</span><em class="hide">25</em></li>
+								<li><span>Использую готовые решения и умею и переделывать</span><em class="hide">50</em></li>
+								<li><span>Пишу сложный JS с нуля</span><em class="hide">100</em></li>
+							</ul>
+						</div>
+						<div class="range_bg">
+						  <input class="range_slider__range" type="range" value="350" min="0" max="500">
+						  <!--span class="range_slider__value">100</span-->
+						</div>
+					</div>
+				</div>
+				<div id="section-4" class="section">
+					<h2 class="icon4 custom_space">Расскажите о себе</h2>
+					<p class="sub_info">Напишите несколько предложений, чем привлекла наша вакансия
+и что вы ожидаете от работы у нас.</p>
+					<textarea placeholder="Понравилась тем, что..." class="area_stle">В первую очередь вакансия заинтерисовала тем что можно удаленно работать, далее есть обещания на интересные проекты. Надеюсь также расти професиональна работая со сложными и не тревиальными задачами.</textarea>
+				</div>
+				<input type="submit" value="Готово" class="btn">
+			</form>
+		</div>
+	</div>
+ 
+
+	<script src="js/scripts.min.js"></script>
+	<script>
+
+	const settings={
+	  fill: '#d7b3f4',
+	  background: '#e8e8e8'
+	}
+
+	const sliders = document.querySelectorAll('.range_slider');
+
+	Array.prototype.forEach.call(sliders,(slider)=>{
+	  slider.querySelector('input').addEventListener('input', (event)=>{
+	    //slider.querySelector('span').innerHTML = event.target.value;
+	    applyFill(event.target);
+	  });
+	  applyFill(slider.querySelector('input'));
+	});
+
+	function applyFill(slider) {
+	  const percentage = 100*(slider.value-slider.min)/(slider.max-slider.min);
+	  const bg = `linear-gradient(90deg, ${settings.fill} ${percentage}%, ${
+    settings.background
+  } ${percentage + 10.1}%)`;
+  slider.style.background = bg;
+	}
+	</script>
+</body>
+</html>
